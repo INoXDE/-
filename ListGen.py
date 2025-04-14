@@ -2,7 +2,7 @@ import os
 import re
 
 # ========= 1. 기존 제공 텍스트 파일 읽기 =========
-provided_file = "F:\리스트_백업.txt"
+provided_file = r"F:\리스트_백업.txt"
 
 # 기존 리스트를 (숫자, 추가텍스트) 튜플 형태로 저장
 provided_entries = []
@@ -35,7 +35,7 @@ with open(provided_file, "r", encoding="utf-8") as f:
                 print(f"제공파일의 줄 '{line}'에서 숫자 정보를 찾을 수 없습니다.")
 
 # ========= 2. 폴더 내 7z 및 zip 파일 읽기 =========
-base_dir = "F:\simya\_미분류"
+base_dir = r"F:\simya\_미분류"
 all_files = os.listdir(base_dir)
 
 # 확장자가 .7z 또는 .zip 이면서 파일명이 "RJ"로 시작하는 파일 선택
@@ -86,7 +86,7 @@ except ValueError as e:
     combined_entries.sort(key=lambda x: int(x[0]))
 
 # ========= 4. 결과물 파일 작성 =========
-output_file = "F:\리스트.txt"
+output_file = r"F:\리스트.txt"
 with open(output_file, "w", encoding="utf-8") as f:
     for num, extra in combined_entries:
         if extra:

@@ -39,7 +39,7 @@ with open(provided_file, "r", encoding="utf-8") as f:
 
 # ========= 2. 폴더 내 7z 파일 읽기 =========
 # 작업 폴더 내 파일 목록을 가져옵니다.
-folder = "F:\simya\_미분류\_분류완_파일만씌우면 됨"  # 필요에 따라 경로를 변경하세요.
+folder = "F:\simya\_미분류"  # 필요에 따라 경로를 변경하세요.
 all_files = os.listdir(folder)
 
 # 확장자가 .7z 이고, 파일명이 "RJ"로 시작하는 파일 선택

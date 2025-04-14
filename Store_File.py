@@ -2,7 +2,7 @@ import os
 import re
 import shutil
 
-base_dir = "."
+base_dir = r"."
 all_files = os.listdir(base_dir)
 
 # 통합 정규식: RJ 뒤에 연속된 숫자와 (선택적) 추가 문자열, 확장자는 7z 또는 zip
